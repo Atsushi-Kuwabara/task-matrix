@@ -1,4 +1,4 @@
-## :page_facing_up: タスクをマトリクス管理できるアプリ ”task_matrix”（作成中です）
+# :page_facing_up: タスクをマトリクス管理できるアプリ ”task_matrix”（作成中です）
 
 ## :page_facing_up: アプリ概要
   タスク管理をマトリクス上で行うためのアプリです。<br>
