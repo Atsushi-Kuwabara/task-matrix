@@ -1,4 +1,5 @@
-タスクをマトリクス管理できるアプリ ”task_matrix”（作成中です）
+（作成中です）マトリクス形式タスク管理アプリ
+![image](https://user-images.githubusercontent.com/48851734/75612263-43783f80-5b65-11ea-815f-0d2d4afac73c.png)
 
 # :page_facing_up: アプリ概要
   ### :question: アプリについて 
