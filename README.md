@@ -8,9 +8,7 @@
       マトリクスはボロボロになり、付箋の消費も多く不便だったので、いっそのことアプリにしてみようと思いました。
 
   ### :clipboard: アプリの機能
-![Blank Diagram (2)](https://user-images.githubusercontent.com/48851734/75602380-e13d2180-5b07-11ea-8833-943ec8f04c16.jpeg)
-
-      
+![image](https://user-images.githubusercontent.com/48851734/75608640-b02f1200-5b44-11ea-8a93-b7649b36e6e4.png)
 
   ### :sound: こだわり(たい)ポイント
       紙と同じ使い勝手を目指したい。
