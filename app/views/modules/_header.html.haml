@@ -1,2 +1,17 @@
 .header
-  ヘッダー作成
+  .header__left
+    .header__left__my-task
+      MyTask
+    .header__left__task-list
+      TaskList  
+    = form_tag('/search', method: :get, class: "header__left__task-search") do
+      %input{type: "search", placeholder: "Search Task", name: "search", class: "search-field"}
+      %button{type: "submit", name: "name", class: "search-button"}
+        %span.fas.fa-search
+    .header__left__title
+      TaskMatrix
+  .header__right
+    .header__right__add-task
+      AddTask
+    .header__right__profile
+      Profile
