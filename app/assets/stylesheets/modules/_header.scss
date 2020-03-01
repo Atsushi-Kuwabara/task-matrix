@@ -1,8 +1,8 @@
 .header {
   font-size: 2.5vh;
   height: 10vh;
-  color: $white;
-  background-color: $black;
+  color: $font-color;
+  background-color: $nav-background-color;
   display: flex;
   justify-content: space-between;
   &__left {
@@ -11,31 +11,31 @@
     &__my-task {
       margin: auto 0;
       padding: 0 2vw;
-      border-right: 2px solid $sky-blue;
+      border-right: 2px solid $line-color;
     }
 
     &__task-list {
       margin: auto 0;
       padding: 0 2vw;
-      border-right: 2px solid $sky-blue;
+      border-right: 2px solid $line-color;
     }
 
     &__task-search {
       margin: auto 0;
       padding: 0 2vw;
       .search-field {
-        background-color: $black;
-        color: $white;
+        background-color: $nav-background-color;
+        color: $font-color;
         width: 14vw;
         border: none;
       }
       .search-button {
-        background-color: $black;
+        background-color: $nav-background-color;
         border: none;
         padding: 0;
         span {
           font-size: 2.5vh;
-          color: $grey;
+          color: $search-color;
         }
       }
     }
@@ -50,7 +50,7 @@
     &__add-task {
       margin: auto 0;
       padding: 0 2vw;
-      border-right: 2px solid $sky-blue;
+      border-right: 2px solid $line-color;
     }
     &__profile {
       margin: auto 0;

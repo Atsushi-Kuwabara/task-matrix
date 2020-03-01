@@ -1,0 +1,20 @@
+.sidebar {
+  box-sizing: border-box;
+  background-color: $nav-background-color;
+  width: 20vw;
+  height: 90vh;
+  color: $font-color;
+  display: block;
+  padding: 3vh 2vw 0 2vw;
+  overflow: scroll;
+  &__project {
+    margin-bottom: 3vh;
+    text-align: center;
+    &__name {
+      font-weight: bold;
+    }
+    &__number-of-tasks {
+      font-size: 2vh;
+    }
+  }
+}
