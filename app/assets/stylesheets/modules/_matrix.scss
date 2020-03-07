@@ -1,0 +1,62 @@
+.matrix {
+  box-sizing: border-box;
+  background-color: $matrix-background-color;
+  width: 85vw;
+  height: 90vh;
+  .task-field {
+    width: 85vw;
+    height: 80vh;
+    display: flex;
+    .tasks {
+      width: 75vw;
+    }
+    .urgency-arrow {
+      width: 10vw;
+      position: relative;
+      &__triangle {
+        position: absolute;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 20vh 8vw;
+        border-color: transparent transparent $arrows transparent;
+      }
+      &__square {
+        writing-mode: vertical-rl;
+        text-align: center;
+        font-size: 4vh;
+        font-weight: bold;
+        line-height: 5vw;
+        margin-top: 20vh;
+        position: absolute;
+        right: 0;
+        background-color: $arrows;
+        width: 5vw;
+        height: 60vh;
+      }
+    }
+  }
+  .importance-arrow {
+    height: 10vh;
+    width: 80vw;
+    display: flex;
+    &__square {
+      margin-top: 3vh;
+      text-align: center;
+      line-height: 7vh;
+      font-size: 4vh;
+      font-weight: bold;
+      background-color: $arrows;
+      width: 65vw;
+      height: 7vh;
+    }
+    &__triangle {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10vh 0 0 20vh;
+      border-color: transparent transparent transparent $arrows;
+    }
+  }
+}
