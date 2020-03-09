@@ -1,6 +1,13 @@
 .matrix
-  .task-field
+  .tasks-field
     .tasks
+      - @tasks.each do |task|
+        .task
+          = link_to task_path(task.id) do
+            .name
+              = task.name
+            .content
+              = "#{task.content[0,5]}..."
     .urgency-arrow
       .urgency-arrow__triangle
       .urgency-arrow__square
