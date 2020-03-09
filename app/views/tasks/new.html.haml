@@ -1,0 +1,6 @@
+= render 'modules/header'
+.contents
+  .container
+    = form_with(model: @task, local: true) do |task|
+      タスクの管理
+    = render 'modules/form'
