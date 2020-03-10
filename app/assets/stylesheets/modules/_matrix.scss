@@ -3,12 +3,30 @@
   background-color: $matrix-background-color;
   width: 85vw;
   height: 90vh;
-  .task-field {
+  .tasks-field {
     width: 85vw;
     height: 80vh;
     display: flex;
     .tasks {
       width: 75vw;
+      .task {
+        background-color: $task-color;
+        height: 10vh;
+        width: 10vw;
+        border: 1px solid;
+        font-size: 2vh;
+        a {
+          text-decoration: none;
+          .name {
+            text-align: center;
+            font-weight: bold;
+            color: $font-color;
+          }
+          .content {
+            color: $font-color;
+          }
+        }
+      }
     }
     .urgency-arrow {
       width: 10vw;

@@ -9,9 +9,12 @@
       %button{type: "submit", name: "name", class: "search-button"}
         %span.fas.fa-search
     .header__left__title
-      TaskMatrix
+      = link_to "TaskMatrix", root_path
   .header__right
     .header__right__add-task
-      AddTask
+      = link_to "AddTask", new_task_path
     .header__right__profile
-      Profile
+      - if user_signed_in?
+        = link_to "Profile", edit_user_registration_path
+      - else
+        = link_to "LogIn", new_user_session_path
