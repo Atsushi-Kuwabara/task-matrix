@@ -59,6 +59,10 @@
     &__profile {
       margin: auto 0;
       padding: 0 2vw 0 2vw;
+      a {
+        text-decoration: none;
+        color: $font-color;
+      }
     }
   }
 }

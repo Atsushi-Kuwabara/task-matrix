@@ -14,4 +14,7 @@
     .header__right__add-task
       = link_to "AddTask", new_task_path
     .header__right__profile
-      Profile
+      - if user_signed_in?
+        = link_to "Profile", edit_user_registration_path
+      - else
+        = link_to "LogIn", new_user_session_path

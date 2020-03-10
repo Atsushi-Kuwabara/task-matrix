@@ -1,6 +1,22 @@
 = render 'modules/header'
 .contents
   .container
-    = form_with(model: @task, local: true) do |task|
-      タスクの管理
-    = render 'modules/form'
+    = form_tag('/tasks', method: :post) do
+      %h3 タスク登録
+      %input{type: "string", placeholder: "type your task-name", name: "name"}
+      %input{type: "text", placeholder: "task description", name: "content"}
+      %input{type: "image", placeholder: "choice your image if you have", name: "image"}
+      = select_tag 'importance'
+        %option{value: ""} ---
+        %option{value: "1"} 最重要
+        %option{value: "2"} 重要
+        %option{value: "3"} 普通
+        %option{value: "4"} あまり重要でない
+        %option{value: "5"} 重要ではない
+      = select_tag 'urgency'
+        %option{value: ""} ---
+        %option{value: "1"} 超緊急
+        %option{value: "2"} 緊急
+        %option{value: "3"} 普通
+        %option{value: "4"} あまり緊急でない
+        %option{value: "5"} 緊急ではない
