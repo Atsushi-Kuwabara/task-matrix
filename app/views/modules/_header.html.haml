@@ -9,7 +9,7 @@
       %button{type: "submit", name: "name", class: "search-button"}
         %span.fas.fa-search
     .header__left__title
-      TaskMatrix
+      = link_to "TaskMatrix", root_path
   .header__right
     .header__right__add-task
       = link_to "AddTask", new_task_path
