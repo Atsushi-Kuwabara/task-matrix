@@ -1,22 +1,13 @@
 = render 'modules/header'
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.container
+  .container__title
+    Sign up
+  .container__form-signup
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email", class: "container__form-signup__email"
+      = f.password_field :password, autocomplete: "new-password", placeholder: "パスワード(6文字以上)", class: "container__form-signup__new-pass"
+      = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワード再入力", class: "container__form-signup__new-pass-confirm"
+      = f.submit "SignUp!!", class: "container__form-signup__signup-btn"
+    .link
+      = render "devise/shared/links"

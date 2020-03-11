@@ -1,0 +1,64 @@
+.container{
+  position: relative;
+  height: 60vh;
+  width: 60vw;
+  margin: 10vh auto;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+  border-radius: 20px;
+  &__title {
+    background-color: $task-manage-title-color;
+    border-radius: 20px 20px 0 0;
+    border-bottom: 1px groove;
+    height: 10vh;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 5vh;
+    font-weight: bold;
+  }
+  &__form-signup {
+    background-color: $task-manage-form-color;
+    border-radius: 0 0 20px 20px;
+    height: 50vh;
+    position: relative;
+    &__email {
+      width: 90%;
+      height: 5vh;
+      margin:2vh 2vw;
+      padding-left: 5px;
+      border: none;
+    }
+    &__new-pass {
+      width: 90%;
+      height: 5vh;
+      margin:2vh 2vw;
+      padding-left: 5px;
+      border: none;
+    }
+    &__new-pass-confirm {
+      width: 90%;
+      height: 5vh;
+      margin:2vh 2vw;
+      padding-left: 5px;
+      border: none;
+    }
+    &__signup-btn {
+      padding: 5px;
+      line-height: 5px;
+      margin:2vh 2vw;
+      left: 2vw;
+      height: 3vh;
+      border: none;
+      background-color: $task-manage-form-color;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+  .link {
+    position: absolute;
+    bottom: 1vh;
+    left: 3vw;
+    a {
+      text-decoration: none;
+    }
+  }
+}
