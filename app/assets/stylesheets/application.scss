@@ -7,6 +7,7 @@
 @import 'modules/header';
 @import 'modules/sidebar';
 @import 'modules/matrix';
-@import 'devise/edit';
+@import 'devise/sessions/new';
 @import 'tasks/new';
 @import 'modules/form';
+@import 'devise/registrations/new';
