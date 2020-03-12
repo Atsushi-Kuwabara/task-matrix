@@ -1,1 +1,17 @@
 = render 'modules/header'
+.task-detail
+  .task-detail__name
+    タスク名：
+    = @task.name
+  .task-detail__description
+    タスク詳細：
+    = @task.content
+  .task-detail__importance
+    重要度：
+    = @task.importance
+  .task-detail__urgency
+    緊急度：
+    = @task.urgency
+  .task-detail__status
+    タスクのステータス：
+    = @task.status
