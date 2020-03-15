@@ -6,6 +6,7 @@
     = render "devise/shared/error_messages", resource: resource
     .container__form
       = f.text_field :name, autofocus: true, autocomplete: "name", class: "container__form__name"
+      = image_tag @user.image.url, height: '40', width: '40', class: 'container__form__icon'
       = f.email_field :email, autofocus: true, autocomplete: "email", class: "container__form__e-mail"
       - if devise_mapping.confirmable? && resource.pending_reconfirmation?
         %div

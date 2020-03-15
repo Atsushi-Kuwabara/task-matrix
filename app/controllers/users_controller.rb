@@ -5,5 +5,8 @@ class UsersController < ApplicationController
   def destroy
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
   
 end
