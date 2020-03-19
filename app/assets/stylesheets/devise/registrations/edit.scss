@@ -30,6 +30,7 @@
     &__icon {
       position: absolute;
       right: 3vw;
+      border-radius: 50px;
     }
     &__e-mail {
       width: 60%;
@@ -66,8 +67,14 @@
     }
     .link {
       position: absolute;
-      bottom: 3vh;
-      left: 5vw;
+      left: 16vw;
+      &__back{
+        left: -2vw;
+        bottom: 10vh;
+      }
+      &__signout {
+        bottom: 3vh;
+      }
     }
   }
 }
