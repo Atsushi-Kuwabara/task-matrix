@@ -12,7 +12,7 @@
       .task {
         background-color: $task-color;
         height: 10vh;
-        width: 10vw;
+        width: 12vw;
         border: 1px solid;
         font-size: 2vh;
         a {
@@ -24,6 +24,15 @@
           }
           .content {
             color: $font-color;
+          }
+          .user {
+            color: $font-color;
+            position: relative;
+            &__icon {
+              position: absolute;
+              right: 0.1vw;
+              border-radius: 50px;
+            }
           }
         }
       }

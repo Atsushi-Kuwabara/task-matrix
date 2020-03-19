@@ -8,6 +8,10 @@
               = task.name
             .content
               = "#{task.content[0,5]}..."
+            .user
+              .user__name
+              = "担当者：#{task.user.name[0,5]}..."
+              %img{:src => task.user.image, height: '20', width: '20', class: 'user__icon'}
     .urgency-arrow
       .urgency-arrow__triangle
       .urgency-arrow__square
