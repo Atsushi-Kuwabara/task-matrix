@@ -20,6 +20,24 @@
     border-radius: 0 0 20px 20px;
     height: 50vh;
     position: relative;
+    &__image {
+      width: 90%;
+      height: 5vh;
+      padding-left: 5px;
+      &__icon {
+        margin:2vh 2vw;
+      }
+      &__label {
+        display: none;
+      }
+    }
+    &__name {
+      width: 90%;
+      height: 5vh;
+      margin:2vh 2vw;
+      padding-left: 5px;
+      border: none;
+    }
     &__email {
       width: 90%;
       height: 5vh;
@@ -54,11 +72,12 @@
     }
   }
   .link {
-    position: absolute;
-    bottom: 1vh;
-    left: 3vw;
+    position: relative;
     a {
+      position: absolute;
       text-decoration: none;
+      right: 4vw;
+      bottom: 4vh;
     }
   }
 }

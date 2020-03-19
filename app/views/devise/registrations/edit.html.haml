@@ -6,6 +6,7 @@
     = render "devise/shared/error_messages", resource: resource
     .container__form
       = f.text_field :name, autofocus: true, autocomplete: "name", class: "container__form__name"
+      %img{:src => @user.image, height: '80', width: '80', class: 'container__form__icon'}
       = f.email_field :email, autofocus: true, autocomplete: "email", class: "container__form__e-mail"
       - if devise_mapping.confirmable? && resource.pending_reconfirmation?
         %div
@@ -22,6 +23,5 @@
       %br/
       = f.submit "Update!!", class: "container__form__update-btn"
       .link
-        = link_to "Back", :back, class: "container__form__back"
-        &nbsp;&nbsp;
-        = link_to "sign_out", destroy_user_session_path, method: :delete, class: "container__form__signout"
+        = link_to "Back", :back, class: "link__back"
+        = link_to "sign_out", destroy_user_session_path, method: :delete, class: "link__signout"

@@ -20,11 +20,17 @@
     border-radius: 0 0 20px 20px;
     height: 48vh;
     padding:2vh 0 0 5vw ;
+    position: relative;
     &__name {
       width: 60%;
       height: 5vh;
       border: none;
       margin-bottom: 2vh;
+    }
+    &__icon {
+      position: absolute;
+      right: 3vw;
+      border-radius: 50px;
     }
     &__e-mail {
       width: 60%;
@@ -61,8 +67,14 @@
     }
     .link {
       position: absolute;
-      bottom: 3vh;
-      left: 5vw;
+      left: 16vw;
+      &__back{
+        left: -2vw;
+        bottom: 10vh;
+      }
+      &__signout {
+        bottom: 3vh;
+      }
     }
   }
 }
