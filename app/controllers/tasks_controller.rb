@@ -20,6 +20,11 @@ class TasksController < ApplicationController
     redirect_to root_path, notice: 'タスクを作成しました！'
   end
 
+  def destroy
+    task = Task.find(params[:id])
+    task.destroy
+  end
+
   private
 
   def task_params

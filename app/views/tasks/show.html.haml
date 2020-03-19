@@ -1,20 +1,31 @@
+= render 'modules/header'
 .task-detail
-  .task-detail__name
-    タスク名：
-    = @task.name
-  .task-detail__description
-    タスク詳細：
-    = @task.content
-  .task-detail__importance
-    重要度：
-    = @task.importance
-  .task-detail__urgency
-    緊急度：
-    = @task.urgency
-  .task-detail__status
-    タスクのステータス：
-    = @task.status
-  .task-detail__person
-    タスクの担当者：
-    = @task.user.name
-    %img{:src => @task.user.image, height: '80', width: '80', class: 'container__form__icon'}
+  .task-detail__title
+    タスク詳細
+  .task-detail__content
+    .task-detail__content__name
+      タスク名：
+      %br
+      = @task.name
+    .task-detail__content__description
+      タスク詳細：
+      %br
+      = @task.content
+    .task-detail__content__importance
+      重要度：
+      = @task.importance
+    .task-detail__content__urgency
+      緊急度：
+      = @task.urgency
+    .task-detail__content__status
+      タスクのステータス：
+      = @task.status
+    .task-detail__content__user
+      .task-detail__content__user__name
+        タスクの担当者:
+        = @task.user.name
+      %img{src: "#{@task.user.image}", height: '60', width: '60', class: "task-detail__content__user__icon"}
+  .task-detail__btn
+    - if user_signed_in? && @task.user.id == current_user.id
+      = link_to "編集する", edit_task_path(@task.id), class: "task-detail__btn__edit"
+      = link_to "削除する", task_path(@task.id), method: :delete, class: "task-detail__btn__edit"
