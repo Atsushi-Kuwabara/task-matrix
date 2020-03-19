@@ -3,7 +3,7 @@
     .tasks
       - @tasks.each do |task|
         .task
-          = link_to edit_task_path(task.id) do
+          = link_to task_path(task.id) do
             .name
               = task.name
             .content

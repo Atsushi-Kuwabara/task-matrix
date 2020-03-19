@@ -1,21 +1,16 @@
 = render 'modules/header'
 .task-detail
-  .task-detail__name
-    タスク名：
-    = @task.name
-  .task-detail__description
-    タスク詳細：
-    = @task.content
-  .task-detail__importance
-    重要度：
-    = @task.importance
-  .task-detail__urgency
-    緊急度：
-    = @task.urgency
-  .task-detail__status
-    タスクのステータス：
-    = @task.status
-  .task-detail__person
-    タスクの担当者：
-    = @task.user.name
-    %img{:src => @task.user.image, height: '80', width: '80', class: 'container__form__icon'}
+  .task-detail__title
+    タスク作成
+  .task-detail__form
+    = form_tag("/tasks/#{@task.id}", method: :patch ) do
+      %input{ name: "name", type: "string", placeholder: "task name", value: "#{@task.name}, "class: "task-name", autofocus: true}
+      %input{ name: "content", type: "text", placeholder: "task details", value: "#{@task.content}, "class: "task-content", autofocus: true}
+      = f.label :image, class: "task-image" do
+        = icon('fas', 'image', class: "task-image__icon")
+        = f.file_field :image, class: "task-image__label"
+      .select-box
+        = f.select :importance, [["01_最重要", 1], ["02_重要", 2], ["03_普通", 3], ["04_あまり重要でない", 4], ["05_重要でない", 5]], prompt: "choice task's importance"
+        = f.select :urgency, [["01_超緊急", 1], ["02_緊急", 2], ["03_普通", 3], ["04_あまり緊急でない", 4], ["05_緊急でない", 5]], prompt: "choice task's urgency"
+      = f.select :status, [["01_未着手", 1], ["02_作業中", 2], ["03_完了", 3], ["04_要確認", 4], ["05_ペンディング", 5]], prompt: "task status"
+      =f.submit 'CreateTask!!', class: "submit-btn"
