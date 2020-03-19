@@ -18,3 +18,4 @@
   .task-detail__person
     タスクの担当者：
     = @task.user.name
+    %img{:src => @task.user.image, height: '80', width: '80', class: 'container__form__icon'}
