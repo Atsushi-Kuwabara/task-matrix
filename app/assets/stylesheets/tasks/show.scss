@@ -1,0 +1,72 @@
+.task-detail{
+  box-sizing: border-box;
+  height: 60vh;
+  width: 60vw;
+  margin: 10vh auto;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+  border-radius: 20px;
+  &__title {
+    background-color: $task-manage-title-color;
+    border-radius: 20px 20px 0 0;
+    border-bottom: 1px groove;
+    height: 10vh;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 5vh;
+    font-weight: bold;
+  }
+  &__content {
+    background-color: $task-manage-form-color;
+    border-radius: 0 0 20px 20px;
+    height: 50vh;
+    position: relative;
+    &__name {
+      margin: 0 2vw;
+      padding-top: 2vh;
+      padding-left: 5px;
+    }
+    &__description {
+      margin:1vh 2vw;
+      padding-left: 5px;
+    }
+    &__importance {
+      margin:1vh 2vw;
+      padding-left: 5px;
+    }
+    &__urgency {
+      margin:1vh 2vw;
+      padding-left: 5px;
+    }
+    &__status {
+      margin:1vh 2vw;
+      padding-left: 5px;
+    }
+    &__user {
+      margin:1vh 2vw;
+      padding-left: 5px;
+      position: relative;
+      &__name {
+
+      }
+      &__icon {
+        position: absolute;
+        right: 0;
+        bottom: 32.5vh;
+        border-radius: 50px;
+      }
+    }
+  }
+  &__btn {
+    position: relative;
+    margin-left: 3vw;
+    &__edit {
+      position: absolute;
+      bottom: 0;
+    }
+    &__delete {
+      position: absolute;
+      bottom: 0;
+      left: 6vw;
+    }
+  }
+}

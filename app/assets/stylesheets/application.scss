@@ -4,11 +4,15 @@
 @import 'config/color';
 @import 'modules/flash';
 @import 'tasks/index';
+@import 'tasks/new';
+@import 'tasks/show';
+@import 'tasks/edit';
+@import 'tasks/update';
+@import 'tasks/destroy';
 @import 'modules/header';
 @import 'modules/sidebar';
 @import 'modules/matrix';
 @import 'devise/sessions/new';
-@import 'tasks/new';
 @import 'modules/form';
 @import 'devise/registrations/new';
 @import 'devise/registrations/edit';
