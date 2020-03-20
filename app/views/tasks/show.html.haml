@@ -28,4 +28,4 @@
   .task-detail__btn
     - if user_signed_in? && @task.user.id == current_user.id
       = link_to "編集する", edit_task_path(@task.id), class: "task-detail__btn__edit"
-      = link_to "削除する", task_path(@task.id), method: :delete, class: "task-detail__btn__edit"
+      = link_to "削除する", task_path(@task.id), method: :delete, class: "task-detail__btn__delete"

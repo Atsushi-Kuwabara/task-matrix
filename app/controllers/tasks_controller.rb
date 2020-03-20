@@ -25,9 +25,14 @@ class TasksController < ApplicationController
     task.destroy
   end
 
+  def update
+    task = Task.find(params[:id])
+    task.update(task_params)
+  end
+
   private
 
   def task_params
-    params.require(:task).permit(:name, :content, :image, :importance, :urgency, :status)
+    params.require(:task).permit(:name, :content, :image, :importance, :urgency, :status, :user_id)
   end
 end

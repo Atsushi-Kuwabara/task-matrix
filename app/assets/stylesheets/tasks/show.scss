@@ -56,4 +56,17 @@
       }
     }
   }
+  &__btn {
+    position: relative;
+    margin-left: 3vw;
+    &__edit {
+      position: absolute;
+      bottom: 0;
+    }
+    &__delete {
+      position: absolute;
+      bottom: 0;
+      left: 6vw;
+    }
+  }
 }
