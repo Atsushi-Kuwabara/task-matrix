@@ -16,7 +16,8 @@ class TasksController < ApplicationController
   end
 
   def create
-    Task.create(name: task_params[:name], content: task_params[:content], image: task_params[:image],importance: task_params[:importance], urgency: task_params[:urgency], status: task_params[:status], user_id: current_user.id, project_id: "1")
+    Task.create(name: task_params[:name], content: task_params[:content], image: task_params[:image],importance: task_params[:importance], urgency: task_params[:urgency], status: task_params[:status], user_id: current_user.id)
+    binding.pry
     redirect_to root_path, notice: 'タスクを作成しました！'
   end
 
