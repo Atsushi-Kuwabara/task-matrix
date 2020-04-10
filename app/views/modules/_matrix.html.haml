@@ -2,16 +2,86 @@
   .tasks-field
     .tasks
       - @tasks.each do |task|
-        .task
-          = link_to task_path(task.id) do
-            .name
-              = task.name
-            .content
-              = "#{task.content[0,5]}..."
-            .user
-              .user__name
-              = "担当者：#{task.user.name[0,5]}..."
-              %img{:src => task.user.image, height: '20', width: '20', class: 'user__icon'}
+        - if task.importance == 1
+          - if task.urgeny == 1
+            .task__i1__u1
+              = render 'modules/task_card'
+          - elseif task.urgeny == 2
+            .task__i1__u2
+              = render 'modules/task_card'
+          - elseif task.urgeny == 3
+            .task__i1__u3
+              = render 'modules/task_card'
+          - elseif task.urgeny == 4
+            .task__i1__u4
+              = render 'modules/task_card'
+          - else
+            .task__i1__u5
+              = render 'modules/task_card'
+        - elseif task.importance == 2
+          - if task.urgeny == 1
+            .task__i2__u1
+              = render 'modules/task_card'
+          - elseif task.urgeny == 2
+            .task__i2__u2
+              = render 'modules/task_card'
+          - elseif task.urgeny == 3
+            .task__i2__u3
+              = render 'modules/task_card'
+          - elseif task.urgeny == 4
+            .task__i2__u4
+              = render 'modules/task_card'
+          - else
+            .task__i2__u5
+              = render 'modules/task_card'
+        - elseif task.importance == 3
+          - if task.urgeny == 1
+            .task__i3__u1
+              = render 'modules/task_card'
+          - elseif task.urgeny == 2
+            .task__i3__u2
+              = render 'modules/task_card'
+          - elseif task.urgeny == 3
+            .task__i3__u3
+              = render 'modules/task_card'
+          - elseif task.urgeny == 4
+            .task__i3__u4
+              = render 'modules/task_card'
+          - else
+            .task__i3__u5
+              = render 'modules/task_card'
+        - elseif task.importance == 4
+          - if task.urgeny == 1
+            .task__i4__u1
+              = render 'modules/task_card'
+          - elseif task.urgeny == 2
+            .task__i4__u2
+              = render 'modules/task_card'
+          - elseif task.urgeny == 3
+            .task__i4__u3
+              = render 'modules/task_card'
+          - elseif task.urgeny == 4
+            .task__i4__u4
+              = render 'modules/task_card'
+          - else
+            .task__i4__u5
+              = render 'modules/task_card'
+        - else
+          - if task.urgeny == 1
+            .task__i5__u1
+              = render 'modules/task_card'
+          - elseif task.urgeny == 2
+            .task__i5__u2
+              = render 'modules/task_card'
+          - elseif task.urgeny == 3
+            .task__i5__u3
+              = render 'modules/task_card'
+          - elseif task.urgeny == 4
+            .task__i5__u4
+              = render 'modules/task_card'
+          - else
+            .task__i5__u5
+              = render 'modules/task_card'
     .urgency-arrow
       .urgency-arrow__triangle
       .urgency-arrow__square
