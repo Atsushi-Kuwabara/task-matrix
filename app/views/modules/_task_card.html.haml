@@ -1,0 +1,9 @@
+= link_to task_path(id) do
+  .name
+    = name
+  .content
+    = "#{content[0,5]}..."
+  .user
+    .user__name
+    = "担当者：#{user_name[0,5]}..."
+    %img{:src => user_image, height: '20', width: '20', class: 'user__icon'}

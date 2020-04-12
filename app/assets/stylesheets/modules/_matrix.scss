@@ -9,32 +9,106 @@
     display: flex;
     .tasks {
       width: 75vw;
-      .task {
-        background-color: $task-color;
-        height: 10vh;
-        width: 12vw;
-        border: 1px solid;
-        font-size: 2vh;
-        a {
-          text-decoration: none;
-          .name {
-            text-align: center;
-            font-weight: bold;
-            color: $font-color;
-          }
-          .content {
-            color: $font-color;
-          }
-          .user {
-            color: $font-color;
-            position: relative;
-            &__icon {
-              position: absolute;
-              right: 0.1vw;
-              border-radius: 50px;
-            }
-          }
-        }
+      padding: 2vh 2vw;
+      position: relative;
+      .task__i1__u1 {
+        @include taskcard-i1;
+      }
+      .task__i1__u2{
+        @include taskcard-i1;
+        top: 17vh;
+      }
+      .task__i1__u3{
+        @include taskcard-i1;
+        top: 32vh;
+      }
+      .task__i1__u4{
+        @include taskcard-i1;
+        top: 47vh;
+      }
+      .task__i1__u5{
+        @include taskcard-i1;
+        top: 62vh;
+      }
+
+      .task__i2__u1 {
+        @include taskcard-i2;
+      }
+      .task__i2__u2{
+        @include taskcard-i2;
+        top: 17vh;
+      }
+      .task__i2__u3{
+        @include taskcard-i2;
+        top: 32vh;
+      }
+      .task__i2__u4{
+        @include taskcard-i2;
+        top: 47vh;
+      }
+      .task__i2__u5{
+        @include taskcard-i2;
+        top: 62vh;
+      }
+
+      .task__i3__u1 {
+        @include taskcard-i3;
+      }
+      .task__i3__u2{
+        @include taskcard-i3;
+        top: 17vh;
+      }
+      .task__i3__u3{
+        @include taskcard-i3;
+        top: 32vh;
+      }
+      .task__i3__u4{
+        @include taskcard-i3;
+        top: 47vh;
+      }
+      .task__i3__u5{
+        @include taskcard-i3;
+        top: 62vh;
+      }
+
+      .task__i4__u1 {
+        @include taskcard-i4;
+      }
+      .task__i4__u2{
+        @include taskcard-i4;
+        top: 17vh;
+      }
+      .task__i4__u3{
+        @include taskcard-i4;
+        top: 32vh;
+      }
+      .task__i4__u4{
+        @include taskcard-i4;
+        top: 47vh;
+      }
+      .task__i4__u5{
+        @include taskcard-i4;
+        top: 62vh;
+      }
+
+      .task__i5__u1 {
+        @include taskcard-i5;
+      }
+      .task__i5__u2{
+        @include taskcard-i5;
+        top: 17vh;
+      }
+      .task__i5__u3{
+        @include taskcard-i5;
+        top: 32vh;
+      }
+      .task__i5__u4{
+        @include taskcard-i5;
+        top: 47vh;
+      }
+      .task__i5__u5{
+        @include taskcard-i5;
+        top: 62vh;
       }
     }
     .urgency-arrow {

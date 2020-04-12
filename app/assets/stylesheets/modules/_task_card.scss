@@ -1,0 +1,21 @@
+
+a {
+  text-decoration: none;
+  .name {
+    text-align: center;
+    font-weight: bold;
+    color: $font-color;
+  }
+  .content {
+    color: $font-color;
+  }
+  .user {
+    color: $font-color;
+    position: relative;
+    &__icon {
+      position: absolute;
+      right: 0.1vw;
+      border-radius: 50px;
+    }
+  }
+}
