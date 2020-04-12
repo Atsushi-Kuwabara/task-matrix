@@ -2,6 +2,7 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 @import 'config/color';
+@import 'config/mixin';
 @import 'modules/flash';
 @import 'tasks/index';
 @import 'tasks/new';
@@ -12,6 +13,7 @@
 @import 'modules/header';
 @import 'modules/sidebar';
 @import 'modules/matrix';
+@import 'modules/task_card';
 @import 'devise/sessions/new';
 @import 'modules/form';
 @import 'devise/registrations/new';

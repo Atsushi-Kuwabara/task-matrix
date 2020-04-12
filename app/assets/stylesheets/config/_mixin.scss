@@ -1,0 +1,49 @@
+@mixin taskcard-i1 {
+  background-color: $task-color;
+  height: 10vh;
+  width: 12vw;
+  border: 1px solid;
+  font-size: 2vh;
+  position: absolute;
+  right: 0;
+}
+
+@mixin taskcard-i2 {
+  background-color: $task-color;
+  height: 10vh;
+  width: 12vw;
+  border: 1px solid;
+  font-size: 2vh;
+  position: absolute;
+  right: 15vw;
+}
+
+@mixin taskcard-i3 {
+  background-color: $task-color;
+  height: 10vh;
+  width: 12vw;
+  border: 1px solid;
+  font-size: 2vh;
+  position: absolute;
+  right: 30vw;
+}
+
+@mixin taskcard-i4 {
+  background-color: $task-color;
+  height: 10vh;
+  width: 12vw;
+  border: 1px solid;
+  font-size: 2vh;
+  position: absolute;
+  right: 45vw;
+}
+
+@mixin taskcard-i5 {
+  background-color: $task-color;
+  height: 10vh;
+  width: 12vw;
+  border: 1px solid;
+  font-size: 2vh;
+  position: absolute;
+  right: 60vw;
+}
