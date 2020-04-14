@@ -5,51 +5,16 @@
   background-color: $nav-background-color;
   display: flex;
   justify-content: space-between;
-  &__left {
-    display: flex;
-
-    &__my-task {
-      margin: auto 0;
-      padding: 0 2vw;
-      border-right: 2px solid $line-color;
-    }
-
-    &__task-list {
-      margin: auto 0;
-      padding: 0 2vw;
-      border-right: 2px solid $line-color;
-    }
-
-    &__task-search {
-      margin: auto 0;
-      padding: 0 2vw;
-      .search-field {
-        background-color: $nav-background-color;
-        color: $font-color;
-        width: 14vw;
-        border: none;
-      }
-      .search-button {
-        background-color: $nav-background-color;
-        border: none;
-        padding: 0;
-        span {
-          font-size: 2.5vh;
-          color: $search-color;
-        }
-      }
-    }
-    &__title {
-      font-size: 6vh;
-      font-weight: bold;
-      margin: auto 2vw;
-      a {
-        text-decoration: none;
-        color: $font-color;
-      }
+  &__title {
+    font-size: 6vh;
+    font-weight: bold;
+    margin: auto 2vw;
+    a {
+      text-decoration: none;
+      color: $font-color;
     }
   }
-  &__right {
+  &__nav {
     display: flex;
     &__add-task {
       margin: auto 0;
@@ -66,6 +31,11 @@
       a {
         text-decoration: none;
         color: $font-color;
+      }
+      &__icon {
+        border-radius: 50px;
+        margin-left: 0.5vw;
+        margin-bottom: -0.5vh;
       }
     }
   }

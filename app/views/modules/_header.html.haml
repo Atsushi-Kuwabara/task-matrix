@@ -1,23 +1,15 @@
 .header
-  .header__left
-    .header__left__my-task
-      MyTask
-    .header__left__task-list
-      TaskList  
-    = form_tag('/search', method: :get, class: "header__left__task-search") do
-      %input{type: "search", placeholder: "Search Task", name: "search", class: "search-field"}
-      %button{type: "submit", name: "name", class: "search-button"}
-        %span.fas.fa-search
-    .header__left__title
-      = link_to "TaskMatrix", root_path
-  .header__right
-    .header__right__add-task
+  .header__title
+    = link_to "TaskMatrix", root_path
+  .header__nav
+    .header__nav__add-task
       - if user_signed_in?
         = link_to "AddTask", new_task_path
       - else
         = link_to "SignUp", new_user_registration_path
-    .header__right__profile
+    .header__nav__profile
       - if user_signed_in?
         = link_to "Profile", edit_user_registration_path
+        %img{:src => current_user.image, height: '30', width: '30', class: 'header__nav__profile__icon'}
       - else
         = link_to "LogIn", new_user_session_path
