@@ -1,6 +1,10 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
+    if user_signed_in?
+      @tasks = Task.all
+    else 
+      redirect_to user_session_path
+    end
   end
 
   def show
