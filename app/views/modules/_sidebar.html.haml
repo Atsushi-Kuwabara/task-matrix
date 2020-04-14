@@ -1,11 +1,13 @@
 .sidebar
-  .sidebar__project
-    .sidebar__project__name
-      プロジェクト名1
-    .sidebar__project__number-of-tasks
-      You have ○ tasks
-  .sidebar__project
-    .sidebar__project__name
-      プロジェクト名2
-    .sidebar__project__number-of-tasks
-      You have ○ tasks
+  - @tasks.each do |task|
+    - if task.user_id == current_user.id
+      .task
+        = link_to task_path(task.id) do
+          .task__name
+            = task.name
+          .task__content
+            = "#{task.content[0,6]}..."
+          .task__importance
+            = "重要度：#{task.importance}"
+          .task__urgency
+            = "重要度：#{task.urgency}"

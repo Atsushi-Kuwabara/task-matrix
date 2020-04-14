@@ -5,15 +5,27 @@
   height: 90vh;
   color: $font-color;
   display: block;
-  padding: 3vh 2vw 0 2vw;
-  &__project {
-    margin-bottom: 3vh;
-    text-align: center;
+  padding:0 2vw;
+  a {
+    color: $font-color;
+    text-decoration: none;
+  }
+  .task {
+    margin: 1vh 1vw;
+    padding-bottom: 1vh;
+    border-bottom: 2px solid $line-color;
     &__name {
+      text-align: center;
       font-weight: bold;
     }
-    &__number-of-tasks {
+    &__content {
       font-size: 2vh;
+    }
+    &__importance {
+      font-size: 1.8vh;
+    }
+    &__urgency {
+      font-size: 1.8vh;
     }
   }
 }
