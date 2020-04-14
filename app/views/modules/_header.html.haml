@@ -1,19 +1,15 @@
 .header
-  .header
-    .header__title
-      = link_to "TaskMatrix", root_path
-    .header__nav
-      .header__nav__my-task
-        MyTask
-      .header__nav__task-list
-        TaskList  
-      .header__nav__add-task
-        - if user_signed_in?
-          = link_to "AddTask", new_task_path
-        - else
-          = link_to "SignUp", new_user_registration_path
-      .header__nav__profile
-        - if user_signed_in?
-          = link_to "Profile", edit_user_registration_path
-        - else
-          = link_to "LogIn", new_user_session_path
+  .header__title
+    = link_to "TaskMatrix", root_path
+  .header__nav
+    .header__nav__add-task
+      - if user_signed_in?
+        = link_to "AddTask", new_task_path
+      - else
+        = link_to "SignUp", new_user_registration_path
+    .header__nav__profile
+      - if user_signed_in?
+        = link_to "Profile", edit_user_registration_path
+        %img{:src => current_user.image, height: '30', width: '30', class: 'header__nav__profile__icon'}
+      - else
+        = link_to "LogIn", new_user_session_path

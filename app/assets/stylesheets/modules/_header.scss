@@ -4,6 +4,7 @@
   color: $font-color;
   background-color: $nav-background-color;
   display: flex;
+  justify-content: space-between;
   &__title {
     font-size: 6vh;
     font-weight: bold;
@@ -15,16 +16,6 @@
   }
   &__nav {
     display: flex;
-    &__my-task {
-      margin: auto 0;
-      padding: 0 2vw;
-      border-right: 2px solid $line-color;
-    }
-    &__task-list {
-      margin: auto 0;
-      padding: 0 2vw;
-      border-right: 2px solid $line-color;
-    }
     &__add-task {
       margin: auto 0;
       padding: 0 2vw;
@@ -40,6 +31,11 @@
       a {
         text-decoration: none;
         color: $font-color;
+      }
+      &__icon {
+        border-radius: 50px;
+        margin-left: 0.5vw;
+        margin-bottom: -0.5vh;
       }
     }
   }
