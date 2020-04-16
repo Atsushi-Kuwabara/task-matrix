@@ -26,6 +26,7 @@
       height: 5vh;
       border: none;
       margin-bottom: 2vh;
+      border-radius: 10px;
     }
     &__icon {
       position: absolute;
@@ -37,24 +38,28 @@
       height: 5vh;
       border: none;
       margin-bottom: 2vh;
+      border-radius: 10px;
     }
     &__password {
       width: 60%;
       height: 5vh;
       border: none;
       margin-bottom: 2vh;
+      border-radius: 10px;
     }
     &__pass-confirmation {
       width: 60%;
       height: 5vh;
       border: none;
       margin-bottom: 2vh;
+      border-radius: 10px;
     }
     &__current-pass {
       width: 60%;
       height: 5vh;
       border: none;
       margin-bottom: 2vh;
+      border-radius: 10px;
     }
     &__update-btn {
       padding: 5px;
@@ -64,6 +69,8 @@
       background-color: $task-manage-form-color;
       cursor: pointer;
       font-weight: bold;
+      border-radius: 10px;
+      color: $font-color;
     }
     .link {
       position: absolute;
@@ -71,9 +78,11 @@
       &__back{
         left: -2vw;
         bottom: 10vh;
+        color: $font-color;
       }
       &__signout {
         bottom: 3vh;
+        color: $font-color;
       }
     }
   }

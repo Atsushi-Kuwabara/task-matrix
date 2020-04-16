@@ -25,6 +25,7 @@
       margin:2vh 2vw;
       padding-left: 5px;
       border: none;
+      border-radius: 10px;
     }
     &__pass {
       width: 90%;
@@ -32,10 +33,12 @@
       margin:2vh 2vw;
       padding-left: 5px;
       border: none;
+      border-radius: 10px;
     }
     &__remember-me {
       height: 5vh;
       margin:2vh 2vw;
+      color: $font-color;
     }
     &__submit {
       padding: 5px;
@@ -47,6 +50,7 @@
       background-color: $task-manage-form-color;
       cursor: pointer;
       font-weight: bold;
+      color: $font-color;
     }
   }
   .link {
@@ -55,6 +59,7 @@
     left: 2vw;
     a {
       text-decoration: none;
+      color: $font-color;
     }
   }
 }

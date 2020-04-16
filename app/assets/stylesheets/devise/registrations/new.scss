@@ -26,6 +26,10 @@
       padding-left: 5px;
       &__icon {
         margin:2vh 2vw;
+        color: $font-color;
+      }
+      span {
+        color: $font-color;
       }
       &__label {
         display: none;
@@ -37,6 +41,7 @@
       margin:2vh 2vw;
       padding-left: 5px;
       border: none;
+      border-radius: 10px;
     }
     &__email {
       width: 90%;
@@ -44,6 +49,7 @@
       margin:2vh 2vw;
       padding-left: 5px;
       border: none;
+      border-radius: 10px;
     }
     &__new-pass {
       width: 90%;
@@ -51,6 +57,7 @@
       margin:2vh 2vw;
       padding-left: 5px;
       border: none;
+      border-radius: 10px;
     }
     &__new-pass-confirm {
       width: 90%;
@@ -58,6 +65,7 @@
       margin:2vh 2vw;
       padding-left: 5px;
       border: none;
+      border-radius: 10px;
     }
     &__signup-btn {
       padding: 5px;
@@ -69,6 +77,7 @@
       background-color: $task-manage-form-color;
       cursor: pointer;
       font-weight: bold;
+      color: $font-color;
     }
   }
   .link {

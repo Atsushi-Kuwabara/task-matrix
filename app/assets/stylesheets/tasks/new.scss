@@ -13,6 +13,7 @@
     line-height: 10vh;
     font-size: 5vh;
     font-weight: bold;
+    color:$font-color;
   }
   &__form {
     background-color: $task-manage-form-color;
@@ -25,6 +26,8 @@
       margin:2vh 2vw;
       padding-left: 5px;
       border: none;
+      color: $font-color;
+      border-radius: 10px;
     }
     .task-content {
       width: 90%;
@@ -32,6 +35,8 @@
       margin:1vh 2vw;
       padding-left: 5px;
       border: none;
+      color: $font-color;
+      border-radius: 10px;
     }
     .task-image {
       position: relative;
@@ -54,11 +59,13 @@
         border: none;
         background-color: $task-manage-form-color;
         cursor: pointer;
+        color: $font-color;
       }
       #task_urgency {
         border: none;
         background-color: $task-manage-form-color;
         cursor: pointer;
+        color: $font-color;
       }
     }
     #task_status {
@@ -67,6 +74,7 @@
       cursor: pointer;
       height: 5vh;
       margin:1vh 1.5vw;
+      color: $font-color;
     }
     .submit-btn {
       position: absolute;
@@ -79,6 +87,7 @@
       background-color: $task-manage-form-color;
       cursor: pointer;
       font-weight: bold;
+      color: $font-color;
     }
   }
 }
