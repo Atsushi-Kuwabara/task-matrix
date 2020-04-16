@@ -14,12 +14,14 @@
     line-height: 10vh;
     font-size: 5vh;
     font-weight: bold;
+    color: $font-color;
   }
   &__content {
     background-color: $task-manage-form-color;
     border-radius: 0 0 20px 20px;
     height: 50vh;
     position: relative;
+    color: $font-color;
     &__name {
       margin: 0 2vw;
       padding-top: 2vh;
@@ -62,11 +64,13 @@
     &__edit {
       position: absolute;
       bottom: 0;
+      color: $font-color;
     }
     &__delete {
       position: absolute;
       bottom: 0;
       left: 6vw;
+      color: $font-color;
     }
   }
 }
