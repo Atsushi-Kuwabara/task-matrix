@@ -20,8 +20,12 @@ class TasksController < ApplicationController
   end
 
   def create
-    Task.create(name: task_params[:name], content: task_params[:content], image: task_params[:image],importance: task_params[:importance], urgency: task_params[:urgency], status: task_params[:status], user_id: current_user.id)
-    redirect_to root_path, notice: 'タスクを作成しました！'
+    @task = Task.create(name: task_params[:name], content: task_params[:content], image: task_params[:image],importance: task_params[:importance], urgency: task_params[:urgency], status: task_params[:status], user_id: current_user.id)
+    if @task.save
+      redirect_to root_path, notice: 'タスクを作成しました！'
+    else 
+      redirect_to new_task_path, notice: 'タスクを作成できませんでした。'
+    end
   end
 
   def destroy
@@ -32,6 +36,11 @@ class TasksController < ApplicationController
   def update
     task = Task.find(params[:id])
     task.update(task_params)
+    if task.save
+      redirect_to root_path, notice: 'タスクを更新しました！'
+    else 
+      redirect_to edit_task_path, notice: 'タスクを変更できませんでした。'
+    end
   end
 
   private
