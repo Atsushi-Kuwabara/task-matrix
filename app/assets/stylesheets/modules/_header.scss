@@ -27,16 +27,15 @@
     }
     &__profile {
       margin: auto 0;
-      padding: 0 2vw 0 2vw;
+      padding: 0 2vw;
       a {
         text-decoration: none;
         color: $font-color;
       }
-      &__icon {
-        border-radius: 50px;
-        margin-left: 0.5vw;
-        margin-bottom: -0.5vh;
-      }
+    }
+    &__icon {
+      border-radius: 50px;
+      margin: auto 1vw auto -1vw;
     }
   }
 }
