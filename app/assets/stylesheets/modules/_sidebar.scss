@@ -6,6 +6,13 @@
   color: $font-color;
   display: block;
   padding:0 2vw;
+  &__title {
+    font-weight: bold;
+    font-size: 3vh;
+    text-align: center;
+    border-bottom: 2.5px solid $line-color;
+    margin-bottom: 2vh;
+  }
   a {
     color: $font-color;
     text-decoration: none;
