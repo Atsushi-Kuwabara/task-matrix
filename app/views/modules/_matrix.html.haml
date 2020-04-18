@@ -2,7 +2,7 @@
   .tasks-field
     .tasks
       - @tasks.each do |task|
-        - if task.user_id == current_user.id
+        - if task.user_id == current_user.id && task.status != 3
           - if task.importance == 1
             .task__i1
               - if task.urgency == 1
