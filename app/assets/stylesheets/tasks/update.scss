@@ -14,6 +14,7 @@
     line-height: 10vh;
     font-size: 5vh;
     font-weight: bold;
+    color: $font-color;
   }
   &__path {
     background-color: $task-manage-form-color;
@@ -22,6 +23,7 @@
     text-align: center;
     line-height: 10vh;
     font-size: 3vh;
+    color: $font-color;
     a {
       text-decoration: none;
     }

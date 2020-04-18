@@ -2,83 +2,83 @@
   .tasks-field
     .tasks
       - @tasks.each do |task|
-        - if task.user_id == current_user.id && task.status != 3
-          - if task.importance == 1
+        - if task.user_id == current_user.id && task.status_id != 3
+          - if task.importance_id == 1
             .task__i1
-              - if task.urgency == 1
+              - if task.urgency_id == 1
                 .task__i1__u1
                   = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-              - elsif task.urgency == 2
+              - elsif task.urgency_id == 2
                 .task__i1__u2
                   = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-              - elsif task.urgency == 3
+              - elsif task.urgency_id == 3
                 .task__i1__u3
                   = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-              - elsif task.urgency == 4
+              - elsif task.urgency_id == 4
                 .task__i1__u4
                   = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
               - else
                 .task__i1__u5
                   = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-          - elsif task.importance == 2
-            - if task.urgency == 1
+          - elsif task.importance_id == 2
+            - if task.urgency_id == 1
               .task__i2__u1
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-            - elsif task.urgency == 2
+            - elsif task.urgency_id == 2
               .task__i2__u2
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-            - elsif task.urgency == 3
+            - elsif task.urgency_id == 3
               .task__i2__u3
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-            - elsif task.urgency == 4
+            - elsif task.urgency_id == 4
               .task__i2__u4
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
             - else
               .task__i2__u5
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-          - elsif task.importance == 3
-            - if task.urgency == 1
+          - elsif task.importance_id == 3
+            - if task.urgency_id == 1
               .task__i3__u1
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-            - elsif task.urgency == 2
+            - elsif task.urgency_id == 2
               .task__i3__u2
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-            - elsif task.urgency == 3
+            - elsif task.urgency_id == 3
               .task__i3__u3
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-            - elsif task.urgency == 4
+            - elsif task.urgency_id == 4
               .task__i3__u4
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
             - else
               .task__i3__u5
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-          - elsif task.importance == 4
-            - if task.urgency == 1
+          - elsif task.importance_id == 4
+            - if task.urgency_id == 1
               .task__i4__u1
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-            - elsif task.urgency == 2
+            - elsif task.urgency_id == 2
               .task__i4__u2
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-            - elsif task.urgency == 3
+            - elsif task.urgency_id == 3
               .task__i4__u3
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-            - elsif task.urgency == 4
+            - elsif task.urgency_id == 4
               .task__i4__u4
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
             - else
               .task__i4__u5
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
           - else
-            - if task.urgency == 1
+            - if task.urgency_id == 1
               .task__i5__u1
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-            - elsif task.urgency == 2
+            - elsif task.urgency_id == 2
               .task__i5__u2
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-            - elsif task.urgency == 3
+            - elsif task.urgency_id == 3
               .task__i5__u3
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
-            - elsif task.urgency == 4
+            - elsif task.urgency_id == 4
               .task__i5__u4
                 = render partial: 'modules/task_card', locals: {id: task.id, name: task.name, content: task.content, user_name: task.user.name, user_image: task.user.image }
             - else

@@ -20,7 +20,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(name: task_params[:name], content: task_params[:content], image: task_params[:image],importance: task_params[:importance], urgency: task_params[:urgency], status: task_params[:status], user_id: current_user.id)
+    @task = Task.create(name: task_params[:name], content: task_params[:content], image: task_params[:image],importance_id: task_params[:importance_id], urgency_id: task_params[:urgency_id], status_id: task_params[:status_id], user_id: current_user.id)
     if @task.save
       redirect_to root_path, notice: 'タスクを作成しました！'
     else 
@@ -46,6 +46,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name, :content, :image, :importance, :urgency, :status, :user_id)
+    params.require(:task).permit(:name, :content, :image, :importance_id, :urgency_id, :status_id, :user_id)
   end
 end

@@ -50,23 +50,26 @@
       margin:1vh 1.5vw;
       display: flex;
       justify-content: space-between;
-      #task_importance {
+      #task_importance_id {
         border: none;
         background-color: $task-manage-form-color;
         cursor: pointer;
+        color: $font-color;
       }
-      #task_urgency {
+      #task_urgency_id {
         border: none;
         background-color: $task-manage-form-color;
         cursor: pointer;
+        color: $font-color;
       }
     }
-    #task_status {
+    #task_status_id {
       border: none;
       background-color: $task-manage-form-color;
       cursor: pointer;
       height: 5vh;
       margin:1vh 1.5vw;
+      color: $font-color;
     }
     .submit-btn {
       position: absolute;

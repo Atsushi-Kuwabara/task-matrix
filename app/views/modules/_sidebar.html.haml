@@ -8,6 +8,6 @@
           .task__content
             = "#{task.content[0,6]}..."
           .task__importance
-            = "重要度：#{task.importance}"
+            = "重要度：#{task.importance.name}"
           .task__urgency
-            = "重要度：#{task.urgency}"
+            = "重要度：#{task.urgency.name}"

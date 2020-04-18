@@ -13,13 +13,13 @@
       = @task.content
     .task-detail__content__importance
       【重要度】
-      = @task.importance
+      = @task.importance.name
     .task-detail__content__urgency
       【緊急度】
-      = @task.urgency
+      = @task.urgency.name
     .task-detail__content__status
       【タスクのステータス】
-      = @task.status
+      = @task.status.name
     .task-detail__content__user
       .task-detail__content__user__name
         【タスクの担当者】
