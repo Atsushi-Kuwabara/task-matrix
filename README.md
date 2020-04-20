@@ -23,6 +23,10 @@
 
   ### :earth_asia: App URL
       http://18.180.47.115
+      
+      【テストアカウント】
+      ID:test@gmail.com
+      PASS:testtest
 
 # :page_facing_up: 開発環境
   - ruby(2.5.1)
