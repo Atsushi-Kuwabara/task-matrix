@@ -7,6 +7,7 @@
   display: block;
   padding:0 2vw;
   &__title {
+    height: 5vh;
     font-weight: bold;
     font-size: 3vh;
     text-align: center;
@@ -17,22 +18,37 @@
     color: $font-color;
     text-decoration: none;
   }
-  .task {
-    margin: 1vh 1vw;
-    padding-bottom: 1vh;
+  .select-wrap {
     border-bottom: 2px solid $line-color;
-    &__name {
-      text-align: center;
-      font-weight: bold;
+    padding-bottom: 2vh;
+    #sort_order {
+      width: 100%;
+      height: 3vh;
+      background-color: $nav-background-color;
+      color: $font-color;
+      border: none;
     }
-    &__content {
-      font-size: 2vh;
-    }
-    &__importance {
-      font-size: 1.8vh;
-    }
-    &__urgency {
-      font-size: 1.8vh;
+  }
+  .task-list {
+    height: 75vh;
+    overflow: scroll;
+    .task {
+      margin: 1vh 1vw;
+      padding-bottom: 1vh;
+      border-bottom: 2px solid $line-color;
+      &__name {
+        text-align: center;
+        font-weight: bold;
+      }
+      &__content {
+        font-size: 2vh;
+      }
+      &__importance {
+        font-size: 1.8vh;
+      }
+      &__urgency {
+        font-size: 1.8vh;
+      }
     }
   }
 }

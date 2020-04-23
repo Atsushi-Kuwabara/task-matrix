@@ -1,15 +1,24 @@
 .sidebar
   .sidebar__title
     自タスク一覧
-  - @tasks.each do |task|
-    - if task.user_id == current_user.id
-      .task
-        = link_to task_path(task.id) do
-          .task__name
-            = task.name
-          .task__content
-            = "#{task.content[0,6]}..."
-          .task__importance
-            = "重要度：#{task.importance.name}"
-          .task__urgency
-            = "重要度：#{task.urgency.name}"
+  .select-wrap
+    %select#sort_order
+      %option{value: "default"}
+        並び替え
+      %option{value: "importance_asc"}
+        重要度順
+      %option{value: "urgency_asc"}
+        緊急度順
+  .task-list
+    - @tasks.each do |task|
+      - if task.user_id == current_user.id
+        .task
+          = link_to task_path(task.id) do
+            .task__name
+              = task.name
+            .task__content
+              = "#{task.content[0,6]}..."
+            .task__importance
+              = "重要度：#{task.importance.name[0,4]}.."
+            .task__urgency
+              = "重要度：#{task.urgency.name[0,4]}.."
