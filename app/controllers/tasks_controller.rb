@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   def index
     if user_signed_in?
-      @tasks = Task.all
+      @tasks = Task.all.order(params[:sort])
     else 
       redirect_to user_session_path
     end
