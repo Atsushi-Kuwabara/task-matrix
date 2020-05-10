@@ -4,12 +4,13 @@
   .header__nav
     .header__nav__add-task
       - if user_signed_in?
-        = link_to "AddTask", new_task_path
+        = link_to "タスク作成", new_task_path
       - else
-        = link_to "SignUp", new_user_registration_path
+        = link_to "新規登録", new_user_registration_path
     - if user_signed_in?
       .header__nav__profile
-        = link_to "Profile", edit_user_registration_path
+        = link_to "ユーザー情報変更", edit_user_registration_path
       %img{:src => current_user.image, height: '25', width: '25', class: 'header__nav__icon'}
     - else
-      = link_to "LogIn", new_user_session_path
+      .header__nav__profile
+        = link_to "ログイン", new_user_session_path
