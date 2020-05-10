@@ -38,16 +38,12 @@ class TasksController < ApplicationController
   end
 
   def update
-    if Task.where(user_id: current_user.id, importance_id: task_params[:importance_id], urgency_id: task_params[:urgency_id]).exists?
-      redirect_to edit_task_path, notice: '重要度✖️緊急度が同じタスクがすでに存在します。'
-    else
-      task = Task.find(params[:id])
-      task.update(task_params)
-      if task.save
-        redirect_to root_path, notice: 'タスクを更新しました！'
-      else 
-        redirect_to edit_task_path, notice: 'タスクを変更できませんでした。'
-      end
+    task = Task.find(params[:id])
+    task.update(task_params)
+    if task.save
+      redirect_to root_path, notice: 'タスクを更新しました！'
+    else 
+      redirect_to edit_task_path, notice: 'タスクを変更できませんでした。'
     end
   end
 
