@@ -20,11 +20,15 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(name: task_params[:name], content: task_params[:content], image: task_params[:image],importance_id: task_params[:importance_id], urgency_id: task_params[:urgency_id], status_id: task_params[:status_id], user_id: current_user.id)
-    if @task.save
-      redirect_to root_path, notice: 'タスクを作成しました！'
-    else 
-      redirect_to new_task_path, notice: 'タスクを作成できませんでした。'
+    if Task.where(user_id: current_user.id, importance_id: task_params[:importance_id], urgency_id: task_params[:urgency_id]).exists?
+      redirect_to new_task_path, notice: '重要度✖️緊急度が同じタスクがすでに存在します。'
+    else
+      @task = Task.create(name: task_params[:name], content: task_params[:content], image: task_params[:image],importance_id: task_params[:importance_id], urgency_id: task_params[:urgency_id], status_id: task_params[:status_id], user_id: current_user.id)
+      if @task.save
+        redirect_to root_path, notice: 'タスクを作成しました！'
+      else 
+        redirect_to new_task_path, notice: 'タスクを作成できませんでした。'
+      end
     end
   end
 
